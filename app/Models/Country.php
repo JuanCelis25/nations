@@ -24,7 +24,7 @@ class Country extends Model
         //foreign key of current model 
         // into related model Region 
         return $this->belongsToMany(Language::class, 'country_languages',
-    'country_id', 'language_id');
+    'country_id', 'language_id)')->withPivot('official');
     }
 
     //m:1 Country - region
